@@ -6,7 +6,7 @@ const Menu = () => (
         <div className={"menu-logo-image"}>LOGO</div>
         <div className={"menu-centre"}>
             <ul className={"horizontal-menu"}>
-                <li><ButtonInMenu text={"Wydarzenia"} href={"/events"}/></li>
+                <li><ButtonInMenu text={"Zawody"} href={"/competitions"}/></li>
                 <li><ButtonInMenu text={"Państwa"} href={"/countries"}/></li>
                 <li><ButtonInMenu text={"Rankingi Europejskie"} href={"/rankings"}/></li>
             </ul>
