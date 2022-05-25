@@ -9,7 +9,7 @@
       }
     },
     "startDate": "2018-03-01",
-    "endDate": "2015-03-01",
+    "endDate": "2019-03-01",
     "type": {
       "type": "Mistrzostwa Polski"
     },
@@ -99,12 +99,12 @@
       "nationalTeams": null
     }
   },
-    {
+  {
     "id": 2,
     "name": "Mistrzostwa Polski juniorów",
     "city": {
       "name": "Kielce",
-      "country":{
+      "country": {
         "name": "Poland"
       }
     },
@@ -124,5 +124,154 @@
       "nationalTeams": null
     }
   },
-
+  {
+    "id": 2,
+    "name": "Mistrzostwa Polski juniorów",
+    "city": {
+      "name": "Kielce",
+      "country": {
+        "name": "Poland"
+      }
+    },
+    "startDate": "2018-03-01",
+    "endDate": "2015-03-01",
+    "type": {
+      "type": "Mistrzostwa Polski"
+    },
+    "details": {
+      "id": 8,
+      "competitorsRegistrationStartDate": "2015-03-01",
+      "competitorsRegistrationEndDate": "2015-03-01",
+      "refereesRegistrationStartDate": "2015-03-01",
+      "refereesRegistrationEndDate": "2018-03-01",
+      "linkToOrganisationalAnnouncement": "String",
+      "ageCategories": null,
+      "nationalTeams": null
+    }
+  },
+  {
+    "id": 2,
+    "name": "Mistrzostwa Polski juniorów",
+    "city": {
+      "name": "Kielce",
+      "country": {
+        "name": "Poland"
+      }
+    },
+    "startDate": "2018-03-01",
+    "endDate": "2015-03-01",
+    "type": {
+      "type": "Mistrzostwa Polski"
+    },
+    "details": {
+      "id": 8,
+      "competitorsRegistrationStartDate": "2015-03-01",
+      "competitorsRegistrationEndDate": "2015-03-01",
+      "refereesRegistrationStartDate": "2015-03-01",
+      "refereesRegistrationEndDate": "2018-03-01",
+      "linkToOrganisationalAnnouncement": "String",
+      "ageCategories": null,
+      "nationalTeams": null
+    }
+  },
+  {
+    "id": 2,
+    "name": "Mistrzostwa Polski juniorów",
+    "city": {
+      "name": "Kielce",
+      "country": {
+        "name": "Poland"
+      }
+    },
+    "startDate": "2018-03-01",
+    "endDate": "2015-03-01",
+    "type": {
+      "type": "Mistrzostwa Polski"
+    },
+    "details": {
+      "id": 8,
+      "competitorsRegistrationStartDate": "2015-03-01",
+      "competitorsRegistrationEndDate": "2015-03-01",
+      "refereesRegistrationStartDate": "2015-03-01",
+      "refereesRegistrationEndDate": "2018-03-01",
+      "linkToOrganisationalAnnouncement": "String",
+      "ageCategories": null,
+      "nationalTeams": null
+    }
+  },
+  {
+    "id": 2,
+    "name": "Mistrzostwa Polski juniorów",
+    "city": {
+      "name": "Kielce",
+      "country": {
+        "name": "Poland"
+      }
+    },
+    "startDate": "2018-03-01",
+    "endDate": "2015-03-01",
+    "type": {
+      "type": "Mistrzostwa Polski"
+    },
+    "details": {
+      "id": 8,
+      "competitorsRegistrationStartDate": "2015-03-01",
+      "competitorsRegistrationEndDate": "2015-03-01",
+      "refereesRegistrationStartDate": "2015-03-01",
+      "refereesRegistrationEndDate": "2018-03-01",
+      "linkToOrganisationalAnnouncement": "String",
+      "ageCategories": null,
+      "nationalTeams": null
+    }
+  },
+  {
+    "id": 2,
+    "name": "Mistrzostwa Polski juniorów",
+    "city": {
+      "name": "Kielce",
+      "country": {
+        "name": "Poland"
+      }
+    },
+    "startDate": "2018-03-01",
+    "endDate": "2015-03-01",
+    "type": {
+      "type": "Mistrzostwa Polski"
+    },
+    "details": {
+      "id": 8,
+      "competitorsRegistrationStartDate": "2015-03-01",
+      "competitorsRegistrationEndDate": "2015-03-01",
+      "refereesRegistrationStartDate": "2015-03-01",
+      "refereesRegistrationEndDate": "2018-03-01",
+      "linkToOrganisationalAnnouncement": "String",
+      "ageCategories": null,
+      "nationalTeams": null
+    }
+  },
+  {
+    "id": 2,
+    "name": "Mistrzostwa Polski juniorów",
+    "city": {
+      "name": "Kielce",
+      "country": {
+        "name": "Poland"
+      }
+    },
+    "startDate": "2018-03-01",
+    "endDate": "2015-03-01",
+    "type": {
+      "type": "Mistrzostwa Polski"
+    },
+    "details": {
+      "id": 8,
+      "competitorsRegistrationStartDate": "2015-03-01",
+      "competitorsRegistrationEndDate": "2015-03-01",
+      "refereesRegistrationStartDate": "2015-03-01",
+      "refereesRegistrationEndDate": "2018-03-01",
+      "linkToOrganisationalAnnouncement": "String",
+      "ageCategories": null,
+      "nationalTeams": null
+    }
+  }
 ]

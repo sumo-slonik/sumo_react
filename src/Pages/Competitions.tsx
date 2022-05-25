@@ -1,6 +1,8 @@
-import ButtonInMenu from "../Components/ButtonInMenu";
 import React from "react";
 import Menu from "../Components/Menu";
+import MyTable from "../Components/MyTable";
+
+
 
 const Competitions = () => (
     <div className={"main-page"}>
@@ -11,6 +13,7 @@ const Competitions = () => (
                 <div className={"content-block"}>
                         <div className={"Header"}>Wydarzenia</div>
                 </div>
+            <MyTable/>
         </div>
         <div className={"fotter"}></div>
         </div>

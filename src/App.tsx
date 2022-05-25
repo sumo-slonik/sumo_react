@@ -12,6 +12,10 @@ function App() {
   return (
     <BrowserRouter>
         <div className="App">
+            <link
+                rel="stylesheet"
+                href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            />
             <Routes>
                 <Route path="/" element={<MainPage/>}/>
                 <Route path="/competitions" element={<Competitions/>}/>
