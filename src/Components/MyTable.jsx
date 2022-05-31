@@ -3,9 +3,11 @@ import React, { Component }  from 'react';
 import competitions from '../Moks/Competitions.json';
 
 
+
 const MyTable = function BasicSearch() {
     return (
         <MaterialTable
+
             title="Basic Search Preview"
             columns={[
                 { title: 'competitions', field: 'name' },
@@ -15,7 +17,8 @@ const MyTable = function BasicSearch() {
             ]}
             data={competitions}
             options={{
-                search: true
+                search: true,
+                maxBodyHeight: 400
             }}
         />
     )

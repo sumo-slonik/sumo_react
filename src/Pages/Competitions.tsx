@@ -1,24 +1,19 @@
 import React from "react";
-import Menu from "../Components/Menu";
+import Menu from "../Components/BootstrapMenu";
 import MyTable from "../Components/MyTable";
+import BootstrapPage from "./BootstrapPage";
 
 
 
 const Competitions = () => (
-    <div className={"main-page"}>
-        <div className={"left-column"}></div>
-        <div className={"center"}>
-        <Menu/>
-        <div className={"content"}>
-                <div className={"content-block"}>
-                        <div className={"Header"}>Wydarzenia</div>
-                </div>
+    <BootstrapPage>
+            <>
+            <div className="well">
+                    <p>Competitions</p>
+            </div>
             <MyTable/>
-        </div>
-        <div className={"fotter"}></div>
-        </div>
-        <div className={"right-column"}></div>
-    </div>
+            </>
+    </BootstrapPage>
 )
 
 export default Competitions

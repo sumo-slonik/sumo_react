@@ -1,22 +1,17 @@
 import React from "react";
-import Menu from "../Components/Menu";
+import Menu from "../Components/BootstrapMenu";
+import BootstrapPage from "./BootstrapPage";
 
 const MainPage = () => (
-    <div className={"main-page"}>
-        <div className={"left-column"}></div>
-        <div className={"center"}>
-        <Menu/>
-        <div className={"content"}>
+
+
+    <BootstrapPage>
                 <div className={"fulll-width-content"}></div>
                 <div className={"content-block"}>
                         <div className={"quarter-width_content"}></div>
                         <div className={"three-quarters-width_content"}></div>
                 </div>
-        </div>
-        <div className={"fotter"}></div>
-        </div>
-        <div className={"right-column"}></div>
-    </div>
+    </BootstrapPage>
 )
 
 export default MainPage
