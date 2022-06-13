@@ -9,7 +9,7 @@ const Competitions = () => (
     <BootstrapPage>
             <>
             <div className="well">
-                    <p>Competitions</p>
+                    <p>Pracownicy w pomieszczeniach</p>
             </div>
             <MyTable/>
             </>

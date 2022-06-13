@@ -1,21 +1,36 @@
 import MaterialTable from 'material-table';
-import React, { Component }  from 'react';
+import React, {Component, useEffect, useState} from 'react';
 import competitions from '../Moks/Competitions.json';
+import axios from "axios";
 
 
 
 const MyTable = function BasicSearch() {
+    const [subjects, setSubjects] = useState([]);
+
+    useEffect( () => {
+        axios({
+            url: "http://localhost:8090/employee/currentLocation",
+            method: "get",
+        }).then((response) => {
+            setSubjects(response.data);
+
+        }).catch((e) => {
+            console.error("cannot fetch subjects: " + e);
+        })
+
+    }, [])
     return (
         <MaterialTable
 
-            title="Basic Search Preview"
+            title="Lokalizacje pracowników"
             columns={[
-                { title: 'competitions', field: 'name' },
-                { title: 'city', field: 'city.name' },
-                { title: 'start date', field: 'startDate' },
-                { title: 'end date', field: 'endDate' },
+                { title: 'Imię', field: 'employee.name' },
+                { title: 'Nazwisko', field: 'employee.surname' },
+                { title: 'Karta', field: 'employee.cardId' },
+                { title: 'Pokój', field: 'roomId' },
             ]}
-            data={competitions}
+            data={subjects}
             options={{
                 search: true,
                 maxBodyHeight: 400
