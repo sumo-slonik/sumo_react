@@ -9,6 +9,7 @@ const Menu = () => (
             <Navbar.Brand href="/">LOGO</Navbar.Brand>
             <Nav className="me-auto">
                 <Nav.Link href={"/competitions"}>Położenia Pracowników</Nav.Link>
+                <Nav.Link href={"/list"}>Lista Pracowników</Nav.Link>
             </Nav>
         </Container>
     </Navbar>

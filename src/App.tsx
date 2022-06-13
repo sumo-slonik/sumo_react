@@ -6,6 +6,7 @@ import './App.css';
 import MainPage from "./Pages/MainPage";
 import Competitions from "./Pages/Competitions";
 import BootstrapPage from "./Pages/BootstrapPage";
+import Empl from "./Pages/empl";
 
 
 function App() {
@@ -20,7 +21,7 @@ function App() {
                 <Route path="/" element={<MainPage/>}/>
                 <Route path="/competitions" element={<Competitions/>}/>
                 <Route path="/countries" element={<MainPage/>}/>
-                <Route path="/rankings" element={<BootstrapPage/>}/>
+                <Route path="/list" element={<Empl/>}/>
                 <Route path="/login" element={<MainPage/>}/>
             </Routes>
         </div>
