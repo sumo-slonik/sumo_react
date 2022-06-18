@@ -6,6 +6,7 @@ import './App.css';
 import MainPage from "./Pages/MainPage";
 import Competitions from "./Pages/Competitions";
 import BootstrapPage from "./Pages/BootstrapPage";
+import CompetitionDetails from "./Pages/Competitions/CompetitionDetails";
 
 
 function App() {
@@ -22,6 +23,8 @@ function App() {
                 <Route path="/countries" element={<MainPage/>}/>
                 <Route path="/rankings" element={<BootstrapPage/>}/>
                 <Route path="/login" element={<MainPage/>}/>
+                <Route path="/competitions/:competitionID" element={<CompetitionDetails/>}/>
+
             </Routes>
         </div>
     </BrowserRouter>
