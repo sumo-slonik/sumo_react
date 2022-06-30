@@ -3,6 +3,7 @@ import React, {Component, useEffect, useState} from 'react';
 import competitions from '../Moks/Competitions.json';
 import axios from "axios";
 import {Column} from "../Objects/Column";
+import {Container} from "react-bootstrap";
 
 type Props ={
     title:string,
@@ -17,7 +18,7 @@ const SimpleTable:React.FC<Props> = function BasicSearch(props) {
             data={props.data}
             options={{
                 search: true,
-                maxBodyHeight: 400
+                maxBodyHeight: 350
             }}
             onRowClick={(event, rowData, togglePanel) => console.log(rowData)}
         />

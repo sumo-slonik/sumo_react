@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { BrowserRouter } from "react-router-dom";
 import { Route, Routes } from "react-router";
 import logo from './logo.svg';
@@ -6,7 +6,8 @@ import './App.css';
 import MainPage from "./Pages/MainPage";
 import Competitions from "./Pages/Competitions";
 import BootstrapPage from "./Pages/BootstrapPage";
-import CompetitionDetails from "./Pages/Competitions/CompetitionDetails";
+import CompetitionDetails from "./Pages/CompetitionDetails";
+import AlterCompetitionsDetails from "./Pages/AlterCompetitionsDetails";
 
 
 function App() {
@@ -23,12 +24,15 @@ function App() {
                 <Route path="/countries" element={<MainPage/>}/>
                 <Route path="/rankings" element={<BootstrapPage/>}/>
                 <Route path="/login" element={<MainPage/>}/>
-                <Route path="/competitions/:competitionID" element={<CompetitionDetails/>}/>
+                <Route path="/competitions/:competitionID" element={<AlterCompetitionsDetails/>}/>
+                <Route path="/alterCompetitors" element={<AlterCompetitionsDetails/>}/>
 
             </Routes>
         </div>
     </BrowserRouter>
   );
 }
+
+
 
 export default App;

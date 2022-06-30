@@ -1,35 +1,37 @@
 import React from "react";
 import Menu from "../Components/BootstrapMenu";
-
+import {Col, Container, Row} from "react-bootstrap";
 type Props = {
     children?: React.ReactNode
 };
 
 const BootstrapPage: React.FC<Props> = ({children})  => (
     <>
-        <div className="container-fluid text-center d-flex flex-column vh-95">
-            <div className="row content vh-95">
-                <div className="col-sm-1 sidenav">
+        <Container fluid className="text-center d-flex flex-column vh-95">
+            <Row className="content row-eq-height h-auto">
+                <Col className="col-sm-1 sidenav vh-95 left-page-margin">
                     <p><a href="#">Link</a></p>
                     <p><a href="#">Link</a></p>
                     <p><a href="#">Link</a></p>
-                </div>
-                <div className="col-sm-10 vh-95">
+                </Col>
+                <Col className="col-sm-10">
                     <Menu/>
-                    {children}
-                </div>
-                <div className="col-sm-1 sidenav vh-95">
+                    <Container fluid className="mainContent">
+                        {children}
+                    </Container>
+                </Col>
+                <Col className="col-sm-1 sidenav vh-95 right-page-margin">
                     <div className="well">
                         <p>ADS</p>
                     </div>
                     <div className="well">
                         <p>ADS</p>
                     </div>
-                </div>
-            </div>
-        </div>
+                </Col>
+            </Row>
+        </Container>
 
-        <footer className="container-fluid text-center vh-5">
+        <footer className="container-fluid text-center vh-5 sticky-bottom footer ">
             <p>Footer Text</p>
         </footer>
     </>

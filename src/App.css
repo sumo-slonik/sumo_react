@@ -196,5 +196,59 @@ footer {
 
 .vh-95 {
   min-height: 95vh;
-  max-height: 95vh;
+}
+
+.vh-98 {
+  min-height: 98vh;
+}
+
+.vh-2 {
+  min-height: 1vh;
+  max-height: 1vh;
+}
+
+.vh-60 {
+  min-height: 60vh;
+  max-height: 60vh;
+}
+
+.vh-80 {
+  min-height: 80vh;
+  max-height: 80vh;
+}
+
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+
+#CompetitionName {
+  position: absolute;
+  background-color: blue;
+  width: 40%;
+  border-radius: 25px;
+
+}
+/*.mainContent{*/
+/*  overflow-y: auto;*/
+/*}*/
+.competitionDetails{
+  background-color: #f1f1f1;
+  z-index: 3;
+  border-radius: 25px;
+}
+.competitionDetailsCard{
+  height: 50%;
+}
+
+@media only screen and (max-width: 550px) {
+  .right-page-margin {
+    display: none;
+  }
+  .left-page-margin {
+    display: none;
+  }
 }
