@@ -1,0 +1,17 @@
+[
+  {
+    "place": 1,
+    "competitions": {
+      "type": "Mistrzostwa Polski",
+      "year": 2018,
+      "City": {
+        "name": "KROTOSZYN",
+        "country": "Poland"
+      }
+    },
+    "category":{
+      "category": "115kg",
+      "ageCategory": "senior"
+    }
+  }
+]

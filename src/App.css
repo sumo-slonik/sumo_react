@@ -224,14 +224,6 @@ footer {
   display: flex;
 }
 
-
-#CompetitionName {
-  position: absolute;
-  background-color: blue;
-  width: 40%;
-  border-radius: 25px;
-
-}
 /*.mainContent{*/
 /*  overflow-y: auto;*/
 /*}*/
@@ -244,11 +236,28 @@ footer {
   height: 50%;
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 720px) {
   .right-page-margin {
     display: none;
   }
   .left-page-margin {
     display: none;
   }
+}
+
+@media only screen and (min-width: 880px) {
+  #CompetitionName {
+    position: absolute;
+  }
+}
+
+#CompetitionName {
+  background-color: blue;
+  width: 40%;
+  border-radius: 25px;
+}
+.competitionDetailsCard>.card-img-top{
+  max-width: 25vw;
+  width: 100%;
+  height: auto;
 }

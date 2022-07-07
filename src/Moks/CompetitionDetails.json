@@ -1,0 +1,34 @@
+{
+    "id": 1,
+    "name": "Mistrzostwa Polski Seniorów",
+    "city": {
+      "name": "Warszawa",
+      "country":{
+        "name": "Poland"
+      }
+    },
+    "startDate": "2018-03-01",
+    "endDate": "2019-03-01",
+    "type": {
+      "type": "Mistrzostwa Polski"
+    },
+    "details": {
+      "id": 4,
+      "competitorsRegistrationStartDate": "2015-03-01",
+      "competitorsRegistrationEndDate": "2015-03-01",
+      "refereesRegistrationStartDate": "2015-03-01",
+      "refereesRegistrationEndDate": "2018-03-01",
+      "linkToOrganisationalAnnouncement": "String",
+      "ageCategories": [
+        "kategoria pierwsza",
+        "Kategoria druga",
+        "Kategoria druga"
+      ],
+      "nationalTeams": [
+        {
+          "id": "id",
+          "name":"name"
+        }
+      ]
+    }
+  }

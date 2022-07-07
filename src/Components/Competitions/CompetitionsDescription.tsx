@@ -10,8 +10,8 @@ const CompetitionsDescription = () => {
     return (
         <>
             <div>
-                <Card className="competitionDetailsCard vh-80">
-                    <Card.Img variant="top" src="https://picsum.photos/200/150" />
+                <Card className="competitionDetailsCard h-auto ">
+                    <Card.Img variant="top" src="https://picsum.photos/1000/1000" className="justify-content-md-center"/>
                     <Card.Body>
                         <Card.Title>
                             OPIS ZAWODÓW

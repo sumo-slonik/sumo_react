@@ -8,6 +8,7 @@ import Competitions from "./Pages/Competitions";
 import BootstrapPage from "./Pages/BootstrapPage";
 import CompetitionDetails from "./Pages/CompetitionDetails";
 import AlterCompetitionsDetails from "./Pages/AlterCompetitionsDetails";
+import CompetitorDetails from "./Pages/CompetitorDetails";
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
                 <Route path="/rankings" element={<BootstrapPage/>}/>
                 <Route path="/login" element={<MainPage/>}/>
                 <Route path="/competitions/:competitionID" element={<AlterCompetitionsDetails/>}/>
+                <Route path="/competitors/:competitorID" element={<CompetitorDetails/>}/>
                 <Route path="/alterCompetitors" element={<AlterCompetitionsDetails/>}/>
 
             </Routes>
