@@ -3,6 +3,7 @@ import React from "react";
 import {Nav} from "react-bootstrap";
 import {BsArrowUpRight} from "react-icons/bs";
 import declared from '../../Moks/DeclaredCompetitions.json'
+import {LinkContainer} from "react-router-bootstrap";
 
 const DeclaredCompetitors = () => {
     const Columns = [
@@ -18,7 +19,11 @@ const DeclaredCompetitors = () => {
 
         {
             "title": 'Szczegóły', field: 'id', render: (rowData: { id: string }) => {
-                return <Nav.Link href={"/competitors/" + rowData.id}><BsArrowUpRight/></Nav.Link>;
+
+                return (
+                    <LinkContainer to={"/competitors/" + rowData.id}>
+                        <Nav.Link ><BsArrowUpRight/></Nav.Link>
+                    </LinkContainer>);
             }
         }
     ]

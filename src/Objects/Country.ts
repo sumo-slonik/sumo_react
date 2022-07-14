@@ -1,9 +1,11 @@
 
 export default class Country {
+    private _id: number;
     private _name: string;
 
-    constructor(name: string) {
+    constructor(name: string,id:number) {
         this._name = name;
+        this._id=id;
     }
 
 
@@ -13,5 +15,14 @@ export default class Country {
 
     set name(value: string) {
         this._name = value;
+    }
+
+
+    get id(): number {
+        return this._id;
+    }
+
+    set id(value: number) {
+        this._id = value;
     }
 }

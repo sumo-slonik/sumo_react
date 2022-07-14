@@ -1,13 +1,8 @@
 import React, {useEffect, useState} from "react";
 import BootstrapPage from "./BootstrapPage";
-import axios from "axios";
-import SimpleTable from "../Components/simpleTable";
 import {Accordion, Col, Nav, Row} from "react-bootstrap";
-import {BsArrowUpRight} from "react-icons/bs";
 import Achievements from "../Components/Competitor/Achievements";
 import Fights from "../Components/Competitor/Fights";
-import DeclaredCompetitors from "../Components/Competitions/DeclaredCompetitors";
-import FightsOnCompetition from "../Components/Competitions/FightsOnCompetition";
 import PieChart from "../Components/Competitor/PieChart";
 
 const CompetitorDetails = () => {
@@ -29,12 +24,12 @@ const CompetitorDetails = () => {
                     </Col>
                 </Row>
 
-                <Row>
+                <Row className="h-auto">
                     <Col className="col-md-12 col-l-6 col-xl-6 col-xl-6">
                         <Achievements/>
                     </Col>
                     <Col className="col-md-12 col-l-6 col-xl-6 col-xl-6">
-                        <Accordion defaultActiveKey="0"  className="vh-80 w-auto">
+                        <Accordion defaultActiveKey="0"  className="h-auto w-auto">
                             <Accordion.Item eventKey="0">
                                 <Accordion.Header>Walki</Accordion.Header>
                                 <Accordion.Body>
@@ -51,14 +46,22 @@ const CompetitorDetails = () => {
                     </Col>
                 </Row>
                 <Row>
-                    <Col className="col-md-12 col-l-4 col-xl-4 col-xl-4">
-                        <PieChart/>
-                    </Col>
-                    <Col className="col-md-12 col-l-4 col-xl-4 col-xl-4">
-                    </Col>
-                    <Col className="col-md-12 col-l-4 col-xl-4 col-xl-4">
-                    </Col>
-
+                    <Row>
+                        <h1>
+                            Wykresy i statystyki
+                        </h1>
+                    </Row>
+                    <Row className="row-eq-height h-12 charts-row">
+                        <Col className=" col-md-12 col-l-4 col-xl-4 col-xl-4">
+                            <PieChart/>
+                        </Col>
+                        <Col className=" col-md-12 col-l-4 col-xl-4 col-xl-4">
+                            <PieChart/>
+                        </Col>
+                        <Col className=" col-md-12 col-l-4 col-xl-4 col-xl-4">
+                            <PieChart/>
+                        </Col>
+                    </Row>
                 </Row>
             </>
         </BootstrapPage>)

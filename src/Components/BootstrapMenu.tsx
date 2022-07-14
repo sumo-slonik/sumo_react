@@ -1,38 +1,47 @@
 import React from 'react';
 import ButtonInMenu from "./ButtonInMenu";
-import {Container, Nav, Navbar, NavDropdown} from "react-bootstrap";
+import {Button, Container, Nav, Navbar, NavDropdown} from "react-bootstrap";
+import {Link} from "react-router-dom";
+import { LinkContainer } from "react-router-bootstrap";
+import LoginModal from "./LoginModal";
 
-const Menu = () => (
-<>
-    {/*<Navbar bg="primary" variant="dark" className=" sticky-top mt-3 mb-1">*/}
-    {/*    <Container>*/}
-    {/*        <Navbar.Brand href="/">LOGO</Navbar.Brand>*/}
-    {/*        <Nav className="me-auto">*/}
-    {/*            <Nav.Link href={"/competitions"}>Zawody</Nav.Link>*/}
-    {/*            <Nav.Link href={"/countries"}>Państwa</Nav.Link>*/}
-    {/*            <Nav.Link href={"/rankings"}>Rankingi Europejskie</Nav.Link>*/}
-    {/*        </Nav>*/}
-    {/*            <Nav className="me-auto">*/}
-    {/*                <Nav.Link href={"/login"}>Login</Nav.Link>*/}
-    {/*            </Nav>*/}
-    {/*    </Container>*/}
-    {/*</Navbar>*/}
+
+const Menu = () => {
+    const [modalShow, setModalShow] = React.useState(false);
+    const handleCloseLogin = () => setModalShow(false);
+    const handleShowLogin = () => setModalShow(true);
+    return (<>
         <Navbar bg="primary" variant="dark" className=" sticky-top mt-3 mb-1" expand="md">
         <Navbar.Brand href="/">LOGO</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href={"/competitions"}>Zawody</Nav.Link>
-                        <Nav.Link href={"/countries"}>Państwa</Nav.Link>
-                        <Nav.Link href={"/rankings"}>Rankingi Europejskie</Nav.Link>
+                        <LinkContainer to="/competitions">
+                            <Nav.Link >Zawody</Nav.Link>
+                        </LinkContainer>
+                        <LinkContainer to="/countries">
+                            <Nav.Link>Państwa</Nav.Link>
+                        </LinkContainer>
+                        <LinkContainer to="/rankings">
+                            <Nav.Link>Rankingi Europejskie</Nav.Link>
+                        </LinkContainer>
+                        {/*admin part*/}
+                        <LinkContainer to="/countryAdmin">
+                            <Nav.Link>Panel administratora reprezentacji</Nav.Link>
+                        </LinkContainer>
+                        {/*admin part*/}
                     </Nav>
                         <Nav className="me-auto">
-                            <Nav.Link href={"/login"}>Login</Nav.Link>
+                            <Button onClick={()=>handleShowLogin()}>
+                                Login
+                            </Button>
                         </Nav>
         </Navbar.Collapse>
     </Navbar>
+    <LoginModal show={modalShow} onHide={()=>{handleCloseLogin()}}/>
 
 </>
 )
+}
 
 export default Menu

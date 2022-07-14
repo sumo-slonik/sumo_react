@@ -4,6 +4,7 @@ import axios from "axios";
 import SimpleTable from "../Components/simpleTable";
 import { Nav } from "react-bootstrap";
 import {BsArrowUpRight} from "react-icons/bs";
+import {LinkContainer} from "react-router-bootstrap";
 
 const Competitions = () => {
     const [competitions, setCompetitions] = useState([]);
@@ -12,7 +13,11 @@ const Competitions = () => {
         {"title": "Data startu", "field": "startDate"},
         {"title": "Data końca", "field": "endDate"},
         { "title": 'Szczegóły', field: 'id', render: (rowData : {id:string}) => {
-                return <Nav.Link href={"/competitions/"+rowData.id}><BsArrowUpRight/></Nav.Link>;
+                return (
+                    <LinkContainer to={"/competitions/"+rowData.id}>
+                        <Nav.Link><BsArrowUpRight/></Nav.Link>
+                    </LinkContainer>
+                );
             }
         }
     ]

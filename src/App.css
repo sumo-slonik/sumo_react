@@ -261,3 +261,12 @@ footer {
   width: 100%;
   height: auto;
 }
+
+.card-img-top {
+  height: 150px;
+  object-fit: cover;
+}
+
+.charts-row{
+  min-height: 350px;
+}
