@@ -1,7 +1,7 @@
-import MaterialTable from 'material-table';
 import React from 'react';
 import {Column} from "../Objects/Column";
 import Category from "../Objects/Category";
+import MaterialTable from "@material-table/core";
 
 type Props = {
     title: string,

@@ -1,6 +1,87 @@
-[ {
-  "category": "77kg",
-  "ageCategory": "senior",
-  "gender": "mężczyźni"
-}
+[
+  {
+    "category": "77kg",
+    "ageCategory": "senior",
+    "gender": "mężczyźni"
+  },
+  {
+    "category": "85kg",
+    "ageCategory": "senior",
+    "gender": "mężczyźni"
+  },
+  {
+    "category": "92kg",
+    "ageCategory": "senior",
+    "gender": "mężczyźni"
+  },
+  {
+    "category": "100kg",
+    "ageCategory": "senior",
+    "gender": "mężczyźni"
+  },
+  {
+    "category": "115kg",
+    "ageCategory": "senior",
+    "gender": "mężczyźni"
+  },
+  {
+    "category": "77kg",
+    "ageCategory": "senior",
+    "gender": "kobiety"
+  },
+  {
+    "category": "77kg",
+    "ageCategory": "senior",
+    "gender": "kobiety"
+  },
+  {
+    "category": "85kg",
+    "ageCategory": "senior",
+    "gender": "kobiety"
+  },
+  {
+    "category": "92kg",
+    "ageCategory": "senior",
+    "gender": "kobiety"
+  },
+  {
+    "category": "100kg",
+    "ageCategory": "junior",
+    "gender": "kobiety"
+  },
+  {
+    "category": "115kg",
+    "ageCategory": "junior",
+    "gender": "kobiety"
+  },
+  {
+    "category": "77kg",
+    "ageCategory": "junior",
+    "gender": "kobiety"
+  },
+  {
+    "category": "77kg",
+    "ageCategory": "junior",
+    "gender": "kobiety"
+  },
+  {
+    "category": "85kg",
+    "ageCategory": "junior",
+    "gender": "kobiety"
+  },
+  {
+    "category": "92kg",
+    "ageCategory": "junior",
+    "gender": "kobiety"
+  },
+  {
+    "category": "100kg",
+    "ageCategory": "junior",
+    "gender": "kobiety"
+  },
+  {
+    "category": "115kg",
+    "ageCategory": "junior",
+    "gender": "kobiety"
+  }
 ]

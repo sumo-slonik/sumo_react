@@ -1,4 +1,4 @@
-import MaterialTable from 'material-table';
+import MaterialTable from "@material-table/core";
 import React, {Component, useEffect, useState} from 'react';
 import competitions from '../Moks/Competitions.json';
 import axios from "axios";
