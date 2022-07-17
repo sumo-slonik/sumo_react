@@ -3,15 +3,14 @@ import BootstrapPage from "./BootstrapPage";
 import CreateCompetitionsFirstPage from "../Components/CreateCompetition/CreateCompetitionsFirstPage";
 import CreateCompetitionsSecondPage from "../Components/CreateCompetition/CreateCompetitionsSecondPage";
 import CreateCompetitionsThirdPage from "../Components/CreateCompetition/CreateCompetitionsThirdPage";
+import CreateCompetitionForm from "../Components/CreateCompetition/CreateCompetitionForm";
 
 const CreateCompetition = () => {
 
     return (
         <BootstrapPage>
             <>
-                <CreateCompetitionsFirstPage/>
-                <CreateCompetitionsSecondPage/>
-                <CreateCompetitionsThirdPage/>
+                <CreateCompetitionForm/>
             </>
         </BootstrapPage>)
 }
