@@ -16,8 +16,8 @@ const CreateCompetitionsSecondPage = () => {
     ]
     return (
         <Row className={'justify-content-center'}>
-            <Col className={'col-5'}>
-            <Form className={"form-control-sm"}>
+            <Col className={'col-7'}>
+            <Form className={"form-control-lg"}>
 
 
                 <SelectionGropingTable title={'Kategorie na zawodach'} columns={columns} data={categories as Category[]}/>

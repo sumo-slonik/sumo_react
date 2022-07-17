@@ -2,39 +2,42 @@ import React from "react";
 import {Button, Col, Form, Row} from "react-bootstrap";
 
 
-const CreateCompetitionsFirstPage = () => {
+const CreateCompetitionsThirdPage = () => {
     return (
         <Row className={'justify-content-center'}>
             <Col className={'col-7'}>
             <Form className={"form-control-lg"}>
 
                 <Form.Group className="mb-3" controlId="competiotionName">
-                    <Form.Label>Nazwa zawodów</Form.Label>
-                    <Form.Control type="text" placeholder="Wprowadź nazwę zawodów"/>
+                    <Form.Label>Początek zgłaszania zawodników</Form.Label>
+                    <Form.Control type="date"/>
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="city">
-                    <Form.Label>Miasto</Form.Label>
-                    <Form.Control type="text" placeholder="Miasto"/>
+                    <Form.Label>Koniec zgłaszania zawodników</Form.Label>
+                    <Form.Control type="date"/>
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="startDate">
-                    <Form.Label>Data rozpoczęcia</Form.Label>
-                    <Form.Control type="date" placeholder="Data rozpoczęcia"/>
+                    <Form.Label>Początek zgłaszania sędziów</Form.Label>
+                    <Form.Control type="date"/>
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="endDate">
-                    <Form.Label>Data zakończnia</Form.Label>
-                    <Form.Control type="date" placeholder="Data zakończenia"/>
+                    <Form.Label>Koniec zgłaszania sędziów</Form.Label>
+                    <Form.Control type="date"/>
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="type">
-                    <Form.Label>Typ zawodów</Form.Label>
-                    <Form.Control type="date" placeholder="wprowadź typ zawodów"/>
+                    <Form.Label>Komunikat organizacyjny</Form.Label>
+                    <Form.Control type="file"/>
                 </Form.Group>
 
                 <Button variant="primary">
-                    Dalej
+                    Wstecz
+                </Button>
+                <Button variant="primary">
+                    Zapisz
                 </Button>
             </Form>
             </Col>
@@ -42,4 +45,4 @@ const CreateCompetitionsFirstPage = () => {
     )
 }
 
-export default CreateCompetitionsFirstPage;
+export default CreateCompetitionsThirdPage;
