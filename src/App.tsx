@@ -1,21 +1,28 @@
 import React, {useEffect} from 'react';
 import { BrowserRouter } from "react-router-dom";
 import { Route, Routes } from "react-router";
-import logo from './logo.svg';
 import './App.css';
 import MainPage from "./Pages/MainPage";
 import Competitions from "./Pages/Competitions";
 import BootstrapPage from "./Pages/BootstrapPage";
-import CompetitionDetails from "./Pages/CompetitionDetails";
 import AlterCompetitionsDetails from "./Pages/AlterCompetitionsDetails";
 import CompetitorDetails from "./Pages/CompetitorDetails";
 import NationalRepresentations from "./Pages/NationalRepresentations";
 import NationalRepresentationDetails from "./Pages/NationalRepresentationDetails";
 import CountryAdminPage from "./Pages/CountryAdminPage";
 import CreateCompetition from "./Pages/CreateCompetition";
+import ClubAdminPage from "./Pages/ClubAdminPage";
+import CreateCompetitor from "./Pages/CreateCompetitor";
+import CreatePersonalDetails from "./Components/CreateCompetitior/CreatePersonalDetails";
+import AddNewCompetitorPage from "./Pages/AddNewCompetitor";
+import {createGlobalState} from "react-hooks-global-state";
+import NationalTeamEdit from "./Pages/NationalTeamEdit";
+import NationalTeamMembersRegistration from "./Pages/NationalTeamMembersRegistration";
+
 
 
 function App() {
+
   return (
     <BrowserRouter>
         <div className="App">
@@ -35,6 +42,11 @@ function App() {
                     <Route path="/alterCompetitors" element={<AlterCompetitionsDetails/>}/>
                     <Route path="/countryAdmin" element={<CountryAdminPage/>}/>
                     <Route path="/countryAdmin/createCompetition" element={<CreateCompetition/>}/>
+                    <Route path="/clubAdmin" element={<ClubAdminPage/>}/>
+                    <Route path="/clubAdmin/addCompetitor" element={<CreateCompetitor/>}/>
+                    <Route path="/clubAdmin/addCompetitor/addNew" element={<AddNewCompetitorPage/>}/>
+                    <Route path="/nationalCoach/editTeam" element={<NationalTeamEdit/>}/>
+                    <Route path="/nationalCoach/competitionRegistration" element={<NationalTeamMembersRegistration/>}/>
 
                 </Routes>
         </div>

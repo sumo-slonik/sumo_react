@@ -4,7 +4,10 @@ import {Nav} from "react-bootstrap";
 import {BsArrowUpRight} from "react-icons/bs";
 import achievements from '../../Moks/Achievements.json'
 
-const NationalTeam = () => {
+type Props = {
+    maxHeight?:number;
+}
+const NationalTeam:React.FC<Props> = (props) => {
     const Columns = [
         {"title": "Imię", "field": "place"},
         {"title": "Nazwisko", "field": "competitions.type"},
@@ -15,7 +18,7 @@ const NationalTeam = () => {
 
     return (
         <>
-            <SimpleTable title={"Reprezentacja"} columns={Columns} data={achievements}/>
+            <SimpleTable title={"Reprezentacja"} columns={Columns} data={achievements} maxHeight={props.maxHeight}/>
         </>
     )
 }

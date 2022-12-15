@@ -217,6 +217,11 @@ footer {
   max-height: 80vh;
 }
 
+.vh-75 {
+  min-height: 75vh;
+  max-height: 75vh;
+}
+
 .row-eq-height {
   display: -webkit-box;
   display: -webkit-flex;

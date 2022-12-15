@@ -8,7 +8,8 @@ import {Container} from "react-bootstrap";
 type Props ={
     title:string,
     columns:Column[],
-    data:{}[]
+    data:{}[],
+    maxHeight?:number;
 }
 const SimpleTable:React.FC<Props> = function BasicSearch(props) {
     return (
@@ -18,7 +19,8 @@ const SimpleTable:React.FC<Props> = function BasicSearch(props) {
             data={props.data}
             options={{
                 search: true,
-                maxBodyHeight: 350
+                maxBodyHeight: props.maxHeight?props.maxHeight:350,
+                toolbar:false
             }}
             onRowClick={(event, rowData, togglePanel) => console.log(rowData)}
         />

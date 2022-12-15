@@ -1,20 +1,20 @@
 
 export default class Country {
     private _id: number;
-    private _name: string;
+    private _country: string;
 
     constructor(name: string,id:number) {
-        this._name = name;
+        this._country = name;
         this._id=id;
     }
 
 
-    get name(): string {
-        return this._name;
+    get country(): string {
+        return this._country;
     }
 
-    set name(value: string) {
-        this._name = value;
+    set country(value: string) {
+        this._country = value;
     }
 
 

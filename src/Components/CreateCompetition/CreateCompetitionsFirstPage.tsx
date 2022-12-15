@@ -4,6 +4,7 @@ import {Button, Col, Form, Row} from "react-bootstrap";
 type Props = {
     page: number
     nextPage: () => void
+    prevPage: () => void
 }
 
 

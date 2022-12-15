@@ -3,20 +3,20 @@ import Club from "./Club";
 
 export default class Competitor {
     private _personalDetails: PersonalDetails;
-    private _actualClub: Club;
-    private _id: BigInteger;
+    private _actualClub: Club | null;
+    private _id: BigInteger | null;
 
-    constructor(personalDetails: PersonalDetails, actualClub: Club, id: BigInteger) {
+    constructor(personalDetails: PersonalDetails, actualClub: Club | null, id: BigInteger|null) {
         this._personalDetails = personalDetails;
         this._actualClub = actualClub;
         this._id = id;
     }
 
-    get id(): BigInteger {
+    get id(): BigInteger | null {
         return this._id;
     }
 
-    set id(value: BigInteger) {
+    set id(value: BigInteger | null) {
         this._id = value;
     }
 
@@ -28,11 +28,11 @@ export default class Competitor {
         this._personalDetails = value;
     }
 
-    get actualClub(): Club {
+    get actualClub(): Club | null {
         return this._actualClub;
     }
 
-    set actualClub(value: Club) {
+    set actualClub(value: Club | null) {
         this._actualClub = value;
     }
 }
