@@ -39,10 +39,10 @@ const CreateCompetitionsThirdPage : React.FC<Props> = (props) => {
                     <Form.Control type="file"/>
                 </Form.Group>
 
-                <Button variant="primary" onClick={props.prevPage}>
+                <Button className={"button"} variant="primary" onClick={props.prevPage}>
                     Wstecz
                 </Button>
-                <Button variant="primary">
+                <Button className={"button"} variant="primary">
                     Zapisz
                 </Button>
             </Form>

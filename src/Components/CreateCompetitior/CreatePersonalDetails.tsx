@@ -19,7 +19,7 @@ const CreatePersonalDetails: React.FC<Props> = (props) => {
     const [genders, setGender] = useState<Sex[]>([])
     const cookie: Authorities = cookies.roles_details;
     // const competitorData: CreateNewCompetitorData = new CreateNewCompetitorData("", "", "", new Date(), "");
-    const [competitorData,setCompetitorData] = useState<CreateNewCompetitorData>(new CreateNewCompetitorData("", "", "", new Date(), ""))
+    const [competitorData, setCompetitorData] = useState<CreateNewCompetitorData>(new CreateNewCompetitorData("", "", "", new Date(), ""))
     const handleNamesChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         competitorData.names = e.target.value
     };
@@ -41,29 +41,29 @@ const CreatePersonalDetails: React.FC<Props> = (props) => {
         let club: Club = cookies.roles_details.administeredClubs.filter((element: Club, index: any, array: any) => {
             return element.name === competitorData.club
         })[0]
-        let personalDetails:PersonalDetails = new PersonalDetails(competitorData.names,competitorData.surname,null,null,null,competitorData.bornDate.toLocaleDateString(),competitorData.gender,null);
+        let personalDetails: PersonalDetails = new PersonalDetails(competitorData.names, competitorData.surname, null, null, null, competitorData.bornDate.toLocaleDateString(), competitorData.gender, null);
         let data = {
-            club:club,
-            personalDetails:{
-                name:personalDetails.names,
-                surname:personalDetails.surname,
-                sex:{
-                    sex:personalDetails.gender
+            club: club,
+            personalDetails: {
+                name: personalDetails.names,
+                surname: personalDetails.surname,
+                sex: {
+                    sex: personalDetails.gender
                 }
             }
         }
         var formdata = new FormData();
         formdata.append("club", JSON.stringify(club));
         formdata.append("personalDetails", JSON.stringify({
-            name:personalDetails.names,
-            surname:personalDetails.surname,
-            sex:{
-                sex:personalDetails.gender
+            name: personalDetails.names,
+            surname: personalDetails.surname,
+            sex: {
+                sex: personalDetails.gender
             }
         }));
 
-        let date = personalDetails.birthDate ? personalDetails.birthDate.toString().split("T")[0].split(".") : ""
-        let parsedDate = date[2]+"-"+date[1]+"-"+date[0]
+        let date = personalDetails.birthDate ? personalDetails.birthDate.toString().split("/") : ""
+        let parsedDate = date[2] + "-" + date[1] + "-" + (date[0].length > 1 ? date[0] : '0' + date[0])
 
 
         axios({
@@ -71,13 +71,13 @@ const CreatePersonalDetails: React.FC<Props> = (props) => {
             method: "POST",
             headers: {
                 "content-type": "application/json",
-                "Authorization": "Bearer "+ accessToken.access_token
+                "Authorization": "Bearer " + accessToken.access_token
             },
             data: {
-                "club":club,
-                "personalDetails":{
-                    "name":personalDetails.names,
-                    "surname":personalDetails.surname,
+                "club": club,
+                "personalDetails": {
+                    "name": personalDetails.names,
+                    "surname": personalDetails.surname,
                     "sex": {
                         "sex": personalDetails.gender
                     },
@@ -157,7 +157,7 @@ const CreatePersonalDetails: React.FC<Props> = (props) => {
                     {/*    <Form.Control type="file"/>*/}
                     {/*</Form.Group>*/}
 
-                    <Button onClick={submitForm}>Zapisz</Button>
+                    <Button className={"button"} onClick={submitForm}>Zapisz</Button>
                 </Form>
             </Col>
         </Row>

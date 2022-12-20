@@ -1,4 +1,4 @@
-import {Nav} from "react-bootstrap";
+import {Card, ListGroup, Nav} from "react-bootstrap";
 import React from "react";
 import Authorities from "../../Objects/Authorities";
 import {LinkContainer} from "react-router-bootstrap";
@@ -12,40 +12,106 @@ const ProfileSectionMenu: React.FC<Props> = (props) => {
         <>
             {console.log("mamy ten przypadek")}
             {console.log(props.authorities)}
-            {props.authorities ?
-            (<>
                 <>
-                    {
-                        props.authorities.roles.includes("CLUB_COACH") ?
-                            (<LinkContainer to="/clubAdmin">
-                                <Nav.Link>Panel trenera klubowego</Nav.Link>
-                            </LinkContainer>) :
-                            <></>
-                    }
+                    <>
+                        {
+                            props.authorities.roles.includes("CLUB_COACH") ?
+                                (
+                                    <>
+                                        <Card>
+                                            <Card.Header>
+                                                <LinkContainer to="/clubAdmin">
+                                                    <Nav.Link>Trener klubowy</Nav.Link>
+                                                </LinkContainer>
+                                            </Card.Header>
+                                            <ListGroup variant="flush">
+                                                <ListGroup.Item>
+                                                    <LinkContainer to="/clubAdmin">
+                                                        <Nav.Link>Dodaj nowego</Nav.Link>
+                                                    </LinkContainer>
+                                                </ListGroup.Item>
+                                                <ListGroup.Item>
+                                                    <LinkContainer to="/clubAdmin">
+                                                        <Nav.Link>Połącz profil</Nav.Link>
+                                                    </LinkContainer>
+                                                </ListGroup.Item>
+                                                <ListGroup.Item>
+                                                    <LinkContainer to="/clubAdmin">
+                                                        <Nav.Link>Transfer</Nav.Link>
+                                                    </LinkContainer>
+                                                </ListGroup.Item>
+                                            </ListGroup>
+                                        </Card>
 
-                    {
-                        props.authorities.roles.includes("NATIONAL_COACH")?
-                            (<LinkContainer to="/nationalCoach/editTeam">
-                                <Nav.Link>Edytuj reprezentacje</Nav.Link>
-                            </LinkContainer>):
-                            <></>
-                    }
+                                    </>
+                                ) :
+                                <></>
+                        }
 
-                    {
-                        props.authorities.roles.includes("NATIONAL_COACH")?
-                            (<LinkContainer to="/nationalCoach/competitionRegistration">
-                                <Nav.Link>Zgłaszanie na zawody</Nav.Link>
-                            </LinkContainer>):
-                            <></>
-                    }
+                        {
+                            props.authorities.roles.includes("NATIONAL_COACH") ?
+
+                                (<>
+                                        <Card>
+                                            <Card.Header>
+                                                <LinkContainer to="/clubAdmin">
+                                                    <Nav.Link>Trener kadrowy</Nav.Link>
+                                                </LinkContainer>
+                                            </Card.Header>
+                                            <ListGroup variant="flush">
+                                                <ListGroup.Item>
+                                                    <LinkContainer to="/nationalCoach/editTeam">
+                                                        <Nav.Link>Edytuj reprezentacje</Nav.Link>
+                                                    </LinkContainer>
+                                                </ListGroup.Item>
+                                                <ListGroup.Item>
+                                                    <LinkContainer to="/nationalCoach/competitionRegistration">
+                                                        <Nav.Link>Zgłoś na zawody</Nav.Link>
+                                                    </LinkContainer>
+                                                </ListGroup.Item>
+                                            </ListGroup>
+                                        </Card>
+
+                                    </>
+                                ) :
+                                <></>
+                        }
+
+                        {
+                            props.authorities.roles.includes("NATIONAL_COACH") ?
+
+                                (<>
+                                        <Card>
+                                            <Card.Header>
+                                                <LinkContainer to="/countryAdmin">
+                                                    <Nav.Link>Administrator Kadrowy</Nav.Link>
+                                                </LinkContainer>
+                                            </Card.Header>
+                                            <ListGroup variant="flush">
+                                                <ListGroup.Item>
+                                                    <LinkContainer to="/countryAdmin">
+                                                        <Nav.Link>Stwórz zawody</Nav.Link>
+                                                    </LinkContainer>
+                                                </ListGroup.Item>
+                                                <ListGroup.Item>
+                                                    <LinkContainer to="/nationalCoach/editTeam">
+                                                        <Nav.Link>Edytuj reprezentacje</Nav.Link>
+                                                    </LinkContainer>
+                                                </ListGroup.Item>
+                                                <ListGroup.Item>
+                                                    <LinkContainer to="/nationalCoach/competitionRegistration">
+                                                        <Nav.Link>Zgłoś na zawody</Nav.Link>
+                                                    </LinkContainer>
+                                                </ListGroup.Item>
+                                            </ListGroup>
+                                        </Card>
+
+                                    </>
+                                ) :
+                                <></>
+                        }
+                    </>
                 </>
-            </>) :
-            (<>
-                Jenak inaczej
-            </>)
-            }
-
-
 
         </>
     )

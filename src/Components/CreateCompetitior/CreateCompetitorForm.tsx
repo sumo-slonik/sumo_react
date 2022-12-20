@@ -56,14 +56,14 @@ const CreateCompetitorForm = () => {
                             <ListGroup>
                                 <ListGroupItem>
                                     <LinkContainer to="/clubAdmin/addCompetitor/addNew">
-                                        <Button>Tworzenie nowego zawodnika</Button>
+                                        <Button className={"button"}>Tworzenie nowego zawodnika</Button>
                                     </LinkContainer>
                                 </ListGroupItem>
                                 <ListGroupItem>
-                                    <Button onClick={goToExistingUserType}>Spięcie zawodnika z instniejącym profilem</Button>
+                                    <Button className={"button"} onClick={goToExistingUserType}>Spięcie zawodnika z instniejącym profilem</Button>
                                 </ListGroupItem>
                                 <ListGroupItem>
-                                    <Button>Transfer zawodnika z innego klubu</Button>
+                                    <Button className={"button"}>Transfer zawodnika z innego klubu</Button>
                                 </ListGroupItem>
                             </ListGroup>
                         </Card.Body>

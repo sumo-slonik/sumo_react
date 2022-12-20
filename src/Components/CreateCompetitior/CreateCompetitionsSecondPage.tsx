@@ -29,10 +29,10 @@ const CreateCompetitionsSecondPage: React.FC<Props> = (props) => {
                         <SelectionGropingTable title={'Kategorie na zawodach'} columns={columns}
                                                data={categories as Category[]}/>
 
-                        <Button variant="primary" className={"m-2"} onClick={props.prevPage}>
+                        <Button variant="primary" className={"m-2 button"} onClick={props.prevPage}>
                             Wstecz
                         </Button>
-                        <Button variant="primary" onClick={props.nextPage}>
+                        <Button className={"button"} variant="primary" onClick={props.nextPage}>
                             Dalej
                         </Button>
                     </Form>

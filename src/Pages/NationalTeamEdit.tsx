@@ -12,11 +12,10 @@ import AgeCategory from "../Objects/ageCategory";
 import WeightCategory from "../Objects/WeightCategory";
 import Sex from "../Objects/Sex";
 import NationalTeamMembershipOfCompetitor from "../Objects/NationalTeamMembershipOfCompetitor";
-import Category from "../Objects/Category";
 
 
 const NationalTeamEdit = () => {
-    const [showAddModal, setShowAddModal] = useState<boolean>(true)
+    const [showAddModal, setShowAddModal] = useState<boolean>(false)
     const [selectedCompetitors, setSelectedCompetitors] = useState<Competitor[]>([])
     const [actualNationalTeam, setActualNationalTeam] = useState<NationalTeamMembershipOfCompetitor[]>([])
     const [ageCategories, setAgeCategoriesy] = useState<AgeCategory[]>([])
@@ -266,7 +265,7 @@ const NationalTeamEdit = () => {
                 </Col>
             </Row>
             <Row className="vh-5 text-center">
-                <Button onClick={
+                <Button className={"button"} onClick={
                     () => {
                         prepareDataTOSend()
                         let data = parseNationalTeamMembershipRq(JSON.stringify(chengesMembershipToDataBese))
@@ -328,7 +327,7 @@ const NationalTeamEdit = () => {
                             </Form>
                         </Col>
                     </Row>
-                    <Row className="text-center m-1"><Button onClick={() => {
+                    <Row className="text-center m-1"><Button className={"button"} onClick={() => {
                         setShowAddModal(false)
                         addCompetitorsToNationalTeam()
                     }}> Zapisz </Button></Row>

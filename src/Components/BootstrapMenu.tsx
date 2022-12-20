@@ -3,6 +3,8 @@ import {Button, Nav, Navbar} from "react-bootstrap";
 import {LinkContainer} from "react-router-bootstrap";
 import LoginModal from "./LoginModal";
 import {useCookies} from "react-cookie";
+import logo from '../logo.png'
+import Image from 'react-bootstrap/Image'
 
 type Props = {
     userLoggedIn:boolean,
@@ -27,8 +29,10 @@ const Menu:React.FC<Props> = (props) => {
         }
     }
     return (<>
-            <Navbar bg="primary" variant="dark" className="vh-5 sticky-top mt-3 mb-1" expand="md">
-                <Navbar.Brand href="/">LOGO</Navbar.Brand>
+            <Navbar variant="dark" className="vh-5 sticky-top mt-3 mb-1 color-nav" expand="md">
+                <Navbar.Brand href="/" className={"brand"}>
+                    <Image src={logo} alt="Logo" className="menu-logo-image"/>
+                </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
@@ -41,14 +45,9 @@ const Menu:React.FC<Props> = (props) => {
                         <LinkContainer to="/rankings">
                             <Nav.Link>Rankingi Europejskie</Nav.Link>
                         </LinkContainer>
-                        {/*admin part*/}
-                        <LinkContainer to="/countryAdmin">
-                            <Nav.Link>Panel administratora reprezentacji</Nav.Link>
-                        </LinkContainer>
-                        {/*admin part*/}
                     </Nav>
                     <Nav className="me-auto">
-                        <Button onClick={() => handleShowLogin()}>
+                        <Button onClick={() => handleShowLogin()} className="button">
                             {props.userLoggedIn ? "wyloguj" : "zaloguj"}
                         </Button>
                     </Nav>

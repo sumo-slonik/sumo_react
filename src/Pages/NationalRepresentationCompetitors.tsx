@@ -17,10 +17,10 @@ const NationalRepresentationDetails = () => {
         <BootstrapPage>
            <h1>Polska</h1>
             <Row className="align-items-lg-start">
-                <Col className="col-1 p-1 m-1"><Button>Kluby</Button></Col>
-                <Col className="col-1 p-1 m-1"><Button>Zaowdnicy</Button></Col>
-                <Col className="col-1 p-1 m-1"><Button>Trenerzy</Button></Col>
-                <Col className="col-1 p-1 m-1"><Button>Sędziowie</Button></Col>
+                <Col className="col-1 p-1 m-1"><Button className={"button"}>Kluby</Button></Col>
+                <Col className="col-1 p-1 m-1"><Button className={"button"}>Zaowdnicy</Button></Col>
+                <Col className="col-1 p-1 m-1"><Button className={"button"}>Trenerzy</Button></Col>
+                <Col className="col-1 p-1 m-1"><Button className={"button"}>Sędziowie</Button></Col>
             </Row>
             <Row>
                     <NationalTeam/>

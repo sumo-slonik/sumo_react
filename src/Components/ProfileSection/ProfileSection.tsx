@@ -1,4 +1,4 @@
-import {Button, Container} from "react-bootstrap";
+import {Button, Card, Container, ListGroup} from "react-bootstrap";
 import {useCookies} from "react-cookie";
 import React, {Dispatch, SetStateAction, useState} from "react";
 import Authorities from "../../Objects/Authorities";
@@ -18,13 +18,7 @@ const ProfileSection: React.FC<Props> = (props) => {
     if (props.userLoggedIn) {
         return (
             <Container fluid>
-
                 <ProfileSectionMenu authorities={cookies.roles_details}/>
-                <Button onClick={() => {
-                    console.log(cookies.roles_details)
-                    console.log(cookies)
-                }}>kliknij mnie</Button>
-
             </Container>
         )
     } else {

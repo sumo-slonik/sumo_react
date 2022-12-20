@@ -20,7 +20,7 @@ const ClubAdminPage = () => {
                 <ListGroup className="list-group-flush">
                     <LinkContainer to={"addCompetitor/"}>
                         <ListGroupItem>
-                            <Button>
+                            <Button className={"button"}>
                                 <TiPlusOutline /> Dodaj
                             </Button>
                         </ListGroupItem>

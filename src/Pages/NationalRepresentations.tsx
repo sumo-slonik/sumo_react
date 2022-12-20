@@ -24,7 +24,7 @@ const NationalRepresentations = () => {
                         <ListGroup className="list-group-flush">
                             <LinkContainer to={"/countries/"+country.id}>
                                 <ListGroupItem>
-                                    <Button>
+                                    <Button className={"button"}>
                                         <AiOutlineHome /> Strona główna
                                     </Button>
                                 </ListGroupItem>

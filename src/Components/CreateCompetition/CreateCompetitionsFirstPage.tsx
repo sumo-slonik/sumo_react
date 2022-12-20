@@ -37,10 +37,15 @@ const CreateCompetitionsFirstPage: React.FC<Props> = (props) => {
 
                         <Form.Group className="mb-3" controlId="type">
                             <Form.Label>Typ zawodów</Form.Label>
-                            <Form.Control type="date" placeholder="wprowadź typ zawodów"/>
+                            <select className="form-select" aria-label="Default select example">
+                                <option selected>Typ zawodów</option>
+                                <option value="1">Mistrzostwa Europy</option>
+                                <option value="2">Puchar Europy</option>
+                                <option value="3">Turniej międzynarodowy</option>
+                            </select>
                         </Form.Group>
 
-                        <Button variant="primary" onClick={()=>{props.nextPage()}}>
+                        <Button variant="primary" onClick={()=>{props.nextPage()}} className={"button"}>
                             Dalej
                         </Button>
                     </Form>

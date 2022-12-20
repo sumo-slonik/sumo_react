@@ -21,7 +21,7 @@ const CountryAdminPage = () => {
                 <ListGroup className="list-group-flush">
                     <LinkContainer to={"createCompetition/"}>
                         <ListGroupItem>
-                            <Button>
+                            <Button className={"button"}>
                                 <TiPlusOutline /> Utwórz nowe zawody
                             </Button>
                         </ListGroupItem>
